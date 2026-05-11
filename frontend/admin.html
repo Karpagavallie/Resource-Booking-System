@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - Resource Booking System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <div class="dashboard-header">
+      <h1>Admin Dashboard</h1>
+      <div class="header-right">
+        <span>Welcome, <strong id="userName"></strong></span>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+    <div class="dashboard-grid">
+
+      <div class="card">
+        <h2>Add Resource</h2>
+
+        <div class="form-group">
+          <label for="resName">Resource Name</label>
+          <input type="text" id="resName" placeholder="Enter resource name" />
+        </div>
+
+        <div class="form-group">
+          <label for="resType">Resource Type</label>
+          <input type="text" id="resType" placeholder="Enter resource type" />
+        </div>
+
+        <button class="primary-btn" onclick="addResource()">Add Resource</button>
+      </div>
+
+      <div class="card">
+        <h2>Manage Resources</h2>
+
+        <div class="table-wrapper">
+          <table id="resourceTable">
+            <thead>
+              <tr>
+                <th>Resource Name</th>
+                <th>Type</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="card bookings-card">
+      <h2>Manage Bookings</h2>
+
+      <div class="table-wrapper">
+        <table id="bookingTable">
+          <thead>
+            <tr>
+              <th>Student</th>
+              <th>Resource</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

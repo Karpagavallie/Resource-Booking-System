@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  min-height: 100vh;
+  color: #222;
+}
+
+/* ---------- LOGIN + REGISTER ---------- */
+body.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.login-box h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.login-box form {
+  width: 100%;
+}
+
+.login-box input,
+.login-box select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+  border-color: #1a73e8;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #155ec4;
+}
+
+.register-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.register-text a {
+  color: #5a2ca0;
+  text-decoration: underline;
+}
+
+.msg-text {
+  min-height: 20px;
+  margin-top: 8px;
+  text-align: center;
+  color: red;
+  font-size: 14px;
+}
+
+/* ---------- DASHBOARD ---------- */
+.dashboard-container {
+  width: 95%;
+  max-width: 1300px;
+  margin: 30px auto;
+}
+
+.dashboard-header {
+  background: #ffffff;
+  padding: 22px 28px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.dashboard-header h1 {
+  font-size: 34px;
+  color: #111;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 18px;
+}
+
+.logout-btn {
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #b52a37;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 22px;
+  color: #111;
+}
+
+/* ---------- FORM GROUPS ---------- */
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #1a73e8;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 13px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #155ec4;
+}
+
+/* ---------- TABLES ---------- */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+#historyTable,
+#resourceTable,
+#bookingTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+#historyTable th,
+#historyTable td,
+#resourceTable th,
+#resourceTable td,
+#bookingTable th,
+#bookingTable td {
+  border: 1px solid #e2e2e2;
+  padding: 13px 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#historyTable th,
+#resourceTable th,
+#bookingTable th {
+  background: #f8f9fa;
+  font-weight: 700;
+  color: #222;
+}
+
+/* ---------- TABLE BUTTONS ---------- */
+#resourceTable button,
+#bookingTable button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+  margin: 2px;
+}
+
+#resourceTable button {
+  background: #dc3545;
+}
+
+#resourceTable button:hover {
+  background: #b52a37;
+}
+
+#bookingTable button {
+  background: #1a73e8;
+}
+
+#bookingTable button:hover {
+  background: #155ec4;
+}
+
+/* ---------- STATUS ---------- */
+.status-pending {
+  color: #d48a00;
+  font-weight: bold;
+}
+
+.status-approved {
+  color: green;
+  font-weight: bold;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: bold;
+}
+
+.bookings-card {
+  margin-top: 10px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .header-right {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .login-box {
+    width: 92%;
+    padding: 30px 22px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 22px;
+  }
+}
