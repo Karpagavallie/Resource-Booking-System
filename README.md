@@ -47,35 +47,23 @@ Before running the project, install the following:
  ▶️ Installation & Setup
 
  1. Clone the Repository
-
-bash
 git clone https://github.com/Karpagavallie/Resource-Booking-System.git
 
  2. Navigate to Project Folder
-
-bash
 cd Resource-Booking-System
 
  3. Install Dependencies
-
-bash
 npm install
 
 4. Configure MySQL Database
 
 Create a MySQL database and update your database credentials inside:
-
-bash
 backend/db.js
 
 5. Start the Backend Server
-
-bash
 node backend/server.js
 
 Server will run at:
-
-bash
 http://localhost:3000
 
 📂 Project Structure
@@ -126,8 +114,5 @@ Resource-Booking-System/
 
 This project is licensed under the MIT License.
 
-
-
 👩‍💻 Author
-
 Karpagavallie 
