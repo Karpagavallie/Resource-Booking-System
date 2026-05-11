@@ -1,40 +1,42 @@
- Resource Booking System
+ # Resource Booking System
 
-A full-stack web application that allows students to book resources and enables administrators to manage bookings and user access efficiently.
+A full-stack web application that allows students to book shared resources and enables administrators to manage bookings and user access efficiently.
 
+---
 
- ✨ Features
+## ✨ Features
 
 * 👤 User Authentication (Student & Admin Login)
 * 📋 Resource Booking Management
 * 📅 Booking Request System
 * ✅ Admin Access and Controls
 * 📊 Separate Student and Admin Dashboards
-* 🔒 Secure Backend with Node.js and Express.js
+* 🔒 Secure Backend APIs
 * 💾 MySQL Database Connectivity
 * 🎨 Responsive Frontend UI
 
+---
 
-🏗️ Technologies Used
+## 🏗️ Technologies Used
 
- Frontend
+### Frontend
 
 * HTML
 * CSS
 * JavaScript
 
- Backend
+### Backend
 
 * Node.js
 * Express.js
 
- Database
+### Database
 
 * MySQL
 
 ---
 
-🛠️ Requirements
+## 🛠️ Requirements
 
 Before running the project, install the following:
 
@@ -44,30 +46,51 @@ Before running the project, install the following:
 
 ---
 
- ▶️ Installation & Setup
+## ▶️ Installation & Setup
 
- 1. Clone the Repository
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/Karpagavallie/Resource-Booking-System.git
+```
 
- 2. Navigate to Project Folder
+### 2. Navigate to Project Folder
+
+```bash
 cd Resource-Booking-System
+```
 
- 3. Install Dependencies
+### 3. Install Dependencies
+
+```bash
 npm install
+```
 
-4. Configure MySQL Database
+### 4. Configure MySQL Database
 
 Create a MySQL database and update your database credentials inside:
-backend/db.js
 
-5. Start the Backend Server
+```bash
+backend/db.js
+```
+
+### 5. Start the Backend Server
+
+```bash
 node backend/server.js
+```
 
 Server will run at:
+
+```bash
 http://localhost:3000
+```
 
-📂 Project Structure
+---
 
+## 📂 Project Structure
+
+```text
 Resource-Booking-System/
 │
 ├── backend/
@@ -89,30 +112,43 @@ Resource-Booking-System/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
- 🔐 User Roles
+---
 
- Student
+## 🔐 User Roles
+
+### Student
 
 * Login/Register
 * View resources
 * Book resources
 
- Admin
+### Admin
 
 * Manage resources
 * Monitor bookings
 * Handle user access
 
+---
 
- 🚀 Future Improvements
+## 🚀 Future Improvements
 
 * Email Notifications
-* Prevents Double Booking
+* Booking Approval System
+* Password Encryption
+* JWT Authentication
+* Mobile Responsive Enhancements
+* Resource Availability Calendar
 
- 📄 License
+---
+
+## 📄 License
 
 This project is licensed under the MIT License.
 
-👩‍💻 Author
-Karpagavallie 
+---
+
+## 👩‍💻 Author
+
+Karpagavallie
