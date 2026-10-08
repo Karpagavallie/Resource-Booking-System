@@ -5,12 +5,21 @@ const db = require("../db");
 
 // Register
 router.post("/register", async (req,res)=>{
-    const {name,email,password,role} = req.body;
+    const {name,email,password} = req.body;
+
+    // All new registrations are students
+    const role = "student";
+
     const hashed = await bcrypt.hash(password,10);
+
     const sql = "INSERT INTO users (name,email,password,role) VALUES (?,?,?,?)";
+
     db.query(sql,[name,email,hashed,role], (err,result)=>{
         if(err) return res.status(500).json({message: err.message});
-        res.status(201).json({message:"User registered successfully!"});
+
+        res.status(201).json({
+            message:"User registered successfully!"
+        });
     });
 });
 
