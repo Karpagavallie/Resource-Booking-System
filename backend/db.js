@@ -1,15 +1,19 @@
+
+
+require("dotenv").config();
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "Karpaga@2006",   // 👈 CHANGE IF YOUR PASSWORD IS DIFFERENT
-  database: "resource_booking"
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+  database: process.env.DB_NAME || "resource_booking",
+  port: Number(process.env.DB_PORT) || 3306
 });
 
 db.connect((err) => {
   if (err) {
-    console.error("DB Connection Error:", err);
+    console.error("MySQL Connection Error:", err.message);
   } else {
     console.log("MySQL Connected Successfully");
   }

@@ -1,30 +1,32 @@
-// server.js
+
 const express = require("express");
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 
-// ------------------- MIDDLEWARE -------------------
+// Middleware
 app.use(cors());
-app.use(express.json()); // to parse JSON request bodies
+app.use(express.json());
 
-// ------------------- DATABASE -------------------
-const db = require("./db"); // make sure db.js is correct and exported
+// Database connection
+const db = require("./db");
 
-// ------------------- ROUTES -------------------
-const authRoutes = require("./routes/auth");       // auth (login/register)
-const bookingRoutes = require("./routes/booking"); // bookings/resources
+// Routes
+const authRoutes = require("./routes/auth");
+const bookingRoutes = require("./routes/booking");
 
 app.use("/api/auth", authRoutes);
-app.use("/api", bookingRoutes); // /api/resources, /api/bookings, POST /api/bookings
+app.use("/api", bookingRoutes);
 
-// ------------------- TEST ROUTE -------------------
+// Test route
 app.get("/", (req, res) => {
-  res.send("Backend is running");
+  res.send("Resource Booking System Backend is running!");
 });
 
-// ------------------- START SERVER -------------------
-const PORT = 3000;
+// Server port
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
